@@ -9,6 +9,7 @@ import { CustomerRequestsComponent } from './customer-requests/customer-requests
 import { CustomerSignUpComponent } from './customer-sign-up/customer-sign-up.component';
 import { ChequeBookRequestsComponent } from './cheque-book-requests/cheque-book-requests.component';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 const routes: Routes=[
   {
@@ -38,7 +39,7 @@ const routes: Routes=[
 ]
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes), HttpClientModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
