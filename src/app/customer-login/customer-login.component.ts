@@ -12,4 +12,9 @@ export class CustomerLoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onLogin(result: { cname: any; psw: any; }){
+    console.log(result.cname);
+    console.log(result.psw);
+  }
+
 }

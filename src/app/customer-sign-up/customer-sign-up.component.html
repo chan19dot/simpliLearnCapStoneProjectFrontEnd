@@ -1,1 +1,39 @@
-<p>customer-sign-up works!</p>
+<!-- <form #customerLogin="ngForm" (ngSubmit)="onLogin(customerLogin.value)"> -->
+    <!-- <div class="imgcontainer">
+      <img src="img_avatar2.png" alt="Avatar" class="avatar">
+    </div> -->
+  <form #customerSignUp="ngForm" (ngSubmit)="signUp(customerSignUp.value)" >
+    <div class="container" >
+      <label for="fname"><b>First Name</b></label>
+      <input type="text" placeholder="Enter First Name" name="fname" required ngModel>
+
+      <label for="lname"><b>Last Name</b></label>
+      <input type="text" placeholder="Enter Last Name" name="lname" required ngModel>
+  
+      <label for="cname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="cname" required ngModel>
+  
+      <label for="mailid"><b>E-Mail</b></label>
+      <input type="email" placeholder="Enter E-Mail Id" name="mailid" required ngModel>
+  
+      <label for="phoneno"><b>Phone no</b></label>
+      <input type="tel" placeholder="Enter Phone no:" name="phoneno" required ngModel>
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required ngModel>
+      
+      <label for="psw2"><b>Re-enter Password</b></label>
+      <input type="password" placeholder="Re-Enter Password" name="psw2" required ngModel>
+  
+      <label for="accountNumber"><b>Bank Account Number</b></label>
+      <input type="password" placeholder="Enter Bank Account Number" name="accountNumber" required ngModel>
+      
+      <label for="accountNumber2"><b>Bank Account Number</b></label>
+      <input type="text" placeholder="Re-Enter Bank Account Number" name="accountNumber2" required ngModel>
+
+      <button class="loginbtn" type="submit">Sign up</button>
+      
+    </div>
+  
+    
+  </form>
