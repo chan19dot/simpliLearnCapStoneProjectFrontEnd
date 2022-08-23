@@ -11,6 +11,7 @@ import { AdminScreenComponent } from './admin-screen/admin-screen.component';
 import { CustomerRequestsComponent } from './customer-requests/customer-requests.component';
 import { CustomerSignUpComponent } from './customer-sign-up/customer-sign-up.component';
 import { ChequeBookRequestsComponent } from './cheque-book-requests/cheque-book-requests.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ChequeBookRequestsComponent } from './cheque-book-requests/cheque-book-
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

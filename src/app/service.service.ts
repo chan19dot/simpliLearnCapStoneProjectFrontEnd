@@ -10,4 +10,8 @@ export class ServiceService {
   getTest(){
     return this.http.get<any>("http://localhost:8085/")
   }
+  getSWAPI(){
+    return this.http.get<any>("https://swapi.dev/api/people/1")
+  }
+
 }
