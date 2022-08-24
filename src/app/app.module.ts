@@ -12,6 +12,10 @@ import { CustomerRequestsComponent } from './customer-requests/customer-requests
 import { CustomerSignUpComponent } from './customer-sign-up/customer-sign-up.component';
 import { ChequeBookRequestsComponent } from './cheque-book-requests/cheque-book-requests.component';
 import { FormsModule } from '@angular/forms';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule } from '@angular/material/card';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +32,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NoopAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

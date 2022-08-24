@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ActivatedRoute, Router } from '@angular/router';
+import { MatCardModule } from '@angular/material/card';
 @Component({
   selector: 'app-customer-login',
   templateUrl: './customer-login.component.html',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomerLoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
@@ -15,6 +19,15 @@ export class CustomerLoginComponent implements OnInit {
   onLogin(result: { cname: any; psw: any; }){
     console.log(result.cname);
     console.log(result.psw);
+    if(this.loginCheck()){
+      sessionStorage.setItem("Customer",result.cname);
+      this.router.navigate(['/icinBank']);
+    }
+    
+  }
+
+  loginCheck():boolean{
+    return true;
   }
 
 }
