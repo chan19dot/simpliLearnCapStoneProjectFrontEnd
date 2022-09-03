@@ -10,6 +10,10 @@ import { CustomerSignUpComponent } from './customer-sign-up/customer-sign-up.com
 import { ChequeBookRequestsComponent } from './cheque-book-requests/cheque-book-requests.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { WithdrawMoneyComponent } from './withdraw-money/withdraw-money.component';
+import { TranferMoneyComponent } from './tranfer-money/tranfer-money.component';
+import { DepositMoneyComponent } from './deposit-money/deposit-money.component';
 
 const routes: Routes=[
   {
@@ -31,10 +35,22 @@ const routes: Routes=[
     path: 'Admin/CustomerRequests', component: CustomerRequestsComponent
   },
   {
-    path: 'Admin/CustomerChequeBookRequest', component: ChequeBookRequestsComponent
+    path: 'icinBank/CustomerChequeBookRequest', component: ChequeBookRequestsComponent
   },
   {
     path: 'signup', component: CustomerSignUpComponent
+  },
+  {
+    path: '', component: LandingPageComponent 
+  },
+  {
+    path:'icinBank/Withdraw', component: WithdrawMoneyComponent
+  },
+  {
+    path:'icinBank/transfermoney', component: TranferMoneyComponent
+  },
+  {
+    path:'icinBank/Deposit', component: DepositMoneyComponent
   }
 ]
 

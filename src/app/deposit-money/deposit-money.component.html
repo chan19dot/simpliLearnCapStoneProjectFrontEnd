@@ -1,0 +1,26 @@
+<h2>Deposit Money</h2>
+<div class="card">
+    <div class="container">
+        <div class="flex-container">
+            <h4><b>Primary Balance: </b></h4>
+            <h2><b>₹ {{data.primaryAmount}}</b></h2>
+        </div>
+      
+    </div>
+    <form #depositMoneyForm="ngForm" (ngSubmit)="depositMoney(depositMoneyForm.value)" >
+        <div class="container" >
+          <label for="deposit"><b>Amount: </b></label>
+          <input type="number" placeholder="0.000" name="deposit" required ngModel>
+          <input type="hidden" name="isDeposit" value="true">
+          <input type="hidden" name="custId" value={{data.id}}>
+          <button class="button">Deposit</button>
+          </div>
+        
+    </form>
+    <div class="float-button">
+        <div class="container">
+            <div class="flex-container">
+                <button (click)="logoutHandler()" class="button">Log out</button>
+            </div>
+        </div>
+    </div>

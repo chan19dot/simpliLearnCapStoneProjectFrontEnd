@@ -1,9 +1,9 @@
-<p>customer-main-screen works!</p>
+
 <div class="card">
     <div class="container">
         <div class="flex-container">
             <h4><b>Primary Balance: </b></h4>
-            <h2><b>$ 5000</b></h2>
+            <h2><b>₹ {{data.primaryAmount}}</b></h2>
         </div>
       
     </div>
@@ -12,22 +12,42 @@
     <div class="container">
         <div class="flex-container">
             <h4><b>Savings Balance: </b></h4>
-            <h2><b>$ 5000</b></h2>
+            <h2><b>₹ {{data.savingsAmount}}</b></h2>
+        </div>
+    </div>
+</div>
+<div class="card">
+    <div class="container">
+        <div class="flex-container">
+            <button (click)="requestChequeBook()" class="button">Request Cheque Book</button>
+            <button (click)="routeToTransferMoney()" class="button" >Transfer Money</button>
         </div>
     </div>
 </div>
 
+
+
 <div class="float-card">
     <div class="container">
         <div class="flex-container">
-            <button class="button">Withdraw</button>
+            <button (click)="routeToWithDraw()" class="button">Withdraw</button>
         </div>
     </div>
 </div>
 <div class="float-card2">
     <div class="container">
         <div class="flex-container">
-            <button class="button">Deposit</button>
+            <button (click)="routeToDeposit()" class="button">Deposit</button>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="float-button">
+    <div class="container">
+        <div class="flex-container">
+            <button (click)="logoutHandler()" class="button">Log out</button>
         </div>
     </div>
 </div>

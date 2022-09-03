@@ -1,27 +1,51 @@
 import { Component, OnInit } from '@angular/core';
+import { ServiceService } from '../service.service';
+
+const signupObject = {
+  firstName: '',
+  lastName: '',
+  phoneNumber: '',
+  email: '',
+  userName: '',
+  pasword: '',
+  savingsAmount: 1000,
+  primaryAmount: 2000,
+  accountNumber: 0,
+};
 
 @Component({
   selector: 'app-customer-sign-up',
   templateUrl: './customer-sign-up.component.html',
-  styleUrls: ['./customer-sign-up.component.css']
+  styleUrls: ['./customer-sign-up.component.css'],
 })
 export class CustomerSignUpComponent implements OnInit {
+  constructor(private service: ServiceService) {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
+  signUp(result: {
+    fname: any;
+    lname: any;
+    cname: any;
+    mailid: any;
+    phoneno: any;
+    psw: any;
+    psw2: any;
+    accountNumber: any;
+    accountNumber2: any;
+  }) {
+    signupObject.firstName = result.fname;
+    signupObject.lastName = result.lname;
+    signupObject.userName = result.cname;
+    signupObject.accountNumber = Number(result.accountNumber);
+    signupObject.email = result.mailid;
+    signupObject.phoneNumber = result.phoneno;
+    signupObject.pasword = result.psw;
+    this.service.postCustomerSignup(signupObject).subscribe((res) => {
+      if (res) {
+        alert('Sign Up Succesful, You can now login!');
+      }
+    });
   }
-
-  signUp(result: { fname: any; lname: any; cname: any; mailid: any; phoneno: any; psw: any; psw2: any; accountNumber: any; accountNumber2: any; }){
-    console.log(result.fname);
-    console.log(result.lname);
-    console.log(result.cname);
-    console.log(result.mailid);
-    console.log(result.phoneno);
-    console.log(result.psw);
-    console.log(result.psw2);
-    console.log(result.accountNumber);
-    console.log(result.accountNumber2);
-  }
-
+  send(): void {}
 }

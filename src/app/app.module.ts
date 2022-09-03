@@ -15,6 +15,10 @@ import { FormsModule } from '@angular/forms';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { TranferMoneyComponent } from './tranfer-money/tranfer-money.component';
+import { DepositMoneyComponent } from './deposit-money/deposit-money.component';
+import { WithdrawMoneyComponent } from './withdraw-money/withdraw-money.component';
 
 
 @NgModule({
@@ -27,7 +31,11 @@ import { MatCardModule } from '@angular/material/card';
     AdminScreenComponent,
     CustomerRequestsComponent,
     CustomerSignUpComponent,
-    ChequeBookRequestsComponent
+    ChequeBookRequestsComponent,
+    LandingPageComponent,
+    TranferMoneyComponent,
+    DepositMoneyComponent,
+    WithdrawMoneyComponent
   ],
   imports: [
     BrowserModule,

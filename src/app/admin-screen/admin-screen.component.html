@@ -1,1 +1,24 @@
-<p>admin-screen works!</p>
+
+<h2> Welcome Administrator</h2>
+<button class="righFloat" (click)="logOut()"> Logout</button>
+<table id="customers">
+  <tr>
+    <th>account number</th>
+    <th>Block Status</th>
+    <th>Block</th>
+    <th>Access</th>
+    <th>Provide Access</th>
+    <th>Cheque Book Requested</th>
+    <th>Issue ChequeBook</th>
+  
+    <tr *ngFor="let customer of data;">  
+        <td>{{customer.accountNumber}}</td>
+        <td>{{customer.blockStatus}}</td>
+        <td><button [disabled]="customer.blockStatus===true" (click)="postBlock(customer)">Block</button></td>   
+        <td>{{customer.access}}</td>  
+        <td><button [disabled]="customer.access===true"(click)="provideAccess(customer)">Provide Access</button></td>  
+        <td>{{customer.chequeBookRequest}}</td>
+        <td><button [disabled]="!customer.chequeBookRequest" (click)="provideChequeBook(customer)">Issue Cheque Book</button></td>  
+    </tr>  
+  
+</table>

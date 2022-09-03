@@ -1,0 +1,9 @@
+.center{
+    position: absolute;
+    right:25%;
+}
+.welcome{
+    font-size: large;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bolder ;
+}

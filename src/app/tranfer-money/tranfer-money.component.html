@@ -1,0 +1,28 @@
+<h2>Intra Bank Transfer</h2>
+<div class="card">
+    <div class="container">
+        <div class="flex-container">
+            <h4><b>Primary Balance: </b></h4>
+            <h2><b>₹ {{data.primaryAmount}}</b></h2>
+        </div>
+      
+    </div>
+    <form #transferMoneyForm="ngForm" (ngSubmit)="transferMoney(transferMoneyForm.value)" >
+        <div class="container" >
+          <label for="beneficiaryName"><b>Benificiary Name: </b></label>
+          <input type="text" placeholder="name" name="beneficiaryName" required ngModel>
+          <label for="beneficiaryId"><b>Beneficiary Name: </b></label>
+          <input type="number" placeholder="00000000" name="beneficiaryId" required ngModel>
+          <label for="amount"><b>Amount: </b></label>
+          <input type="number" placeholder="0.000" name="amount" required ngModel>
+          <button class="button">Transfer</button>
+          </div>
+        
+    </form>
+    <div class="float-button">
+        <div class="container">
+            <div class="flex-container">
+                <button (click)="logoutHandler()" class="button">Log out</button>
+            </div>
+        </div>
+    </div>
